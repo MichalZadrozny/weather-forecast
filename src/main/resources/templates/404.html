@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+<div th:replace="fragments/page-fragments :: topbar"></div>
+
+<form method="post">
+    <input type="text" name="city">
+    <input type="submit" value="Search"/>
+</form>
+
+City has not been found.
+
+<footer th:replace="fragments/page-fragments :: footer"></footer>
+</body>
+</html>

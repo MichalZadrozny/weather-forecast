@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <div th:fragment="topbar">
+        <div class="topbar">
+            Logo
+        </div>
+
+        <div class="topbar">
+            <img src="img/banner.jpg" height="100" width="80%"/>
+        </div>
+
+        <div class="topbar">
+            <div class="degrees">
+                <button type="button" >°C</button>
+            </div>
+            <div class="degrees">
+                <button type="button" >°F</button>
+            </div>
+        </div>
+    </div>
+
+    <footer th:fragment="footer" id="footer" align="bottom">
+        <div class="footer-element">
+            Open Weather API
+        </div>
+        <div class="footer-element">
+            Copyright Weather Forecast Michał Zadrożny
+        </div>
+        <div class="footer-element">
+            <a href="https://github.com/MichalZadrozny">
+                <img src="img/git.png" height="60" width="60"/>
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>

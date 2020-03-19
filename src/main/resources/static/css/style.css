@@ -1,0 +1,36 @@
+.footer-element{
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    background-color: cadetblue;
+    border: 3px black;
+}
+
+.topbar{
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.degrees{
+    float: left;
+}
+
+
+#footer{
+    text-align: center;
+    background-color: dimgrey;
+    display: table;
+    width: 100%;
+}
+
+.weather-box{
+    width: 100%;
+    background-color: darkseagreen;
+}
+
+body{
+    background-color: darkgrey;
+}
+

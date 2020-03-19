@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+<div th:replace="fragments/page-fragments :: topbar"></div>
+
+<input type="text">
+<button type="button">Search</button>
+<div class="weather-box">
+
+    <!--    Left-->
+    <div>
+        <!--        Picture-->
+        <div>
+
+        </div>
+        <!--        Degrees-->
+        <div>
+            <h3 th:text="*{currentWeather.currentTemperature}"/>
+        </div>
+    </div>
+
+    <!--    Right details-->
+    <div>
+
+    </div>
+
+    <!--    Bottom Hourly Forecast-->
+    <div>
+
+    </div>
+
+    <!--    Bottom Daily Forecast-->
+    <div>
+
+    </div>
+
+</div>
+
+<footer th:replace="fragments/page-fragments :: footer"></footer>
+</body>
+</html>
