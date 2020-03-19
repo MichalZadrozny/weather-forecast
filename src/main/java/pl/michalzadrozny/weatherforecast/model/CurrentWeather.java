@@ -272,9 +272,9 @@ public class CurrentWeather {
 
     public void setTemperatures(){
         if(isSetAsCelsius){
-            System.out.println("TEST");
+            System.out.println("TEST!");
             System.out.println(getMain().toString());
-            System.out.println("TEST2");
+            System.out.println("TEST2!");
 
             this.currentTemperature = main.kelvinToCelsius(main.getTemp());
             this.minTemperature = main.kelvinToCelsius(main.getTempMin());
