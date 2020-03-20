@@ -7,12 +7,16 @@
 </head>
 <body>
 
-<div th:replace="fragments/page-fragments :: topbar"></div>
+<!--<div th:replace="fragments/page-fragments :: topbar"></div>-->
 
 <input type="text">
 <button type="button">Search</button>
 <div class="weather-box">
 
+
+    <div class="placeLabel">
+        <label th:text="${currentWeather.getName()}"/>, <label th:text="${currentWeather.getSys().getCountry()}"/>
+    </div>
     <!--    Left-->
     <div>
         <!--        Picture-->
@@ -21,7 +25,8 @@
         </div>
         <!--        Degrees-->
         <div>
-            <h3 th:text="*{currentWeather.currentTemperature}"/>
+            <!--/*@thymesVar id="currentWeather" type="pl"*/-->
+            <h3 th:text="${currentWeather.getCurrentTemperature()}"/>
         </div>
     </div>
 

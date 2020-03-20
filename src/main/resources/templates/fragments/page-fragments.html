@@ -17,10 +17,13 @@
 
         <div class="topbar">
             <div class="degrees">
-                <button type="button" >°C</button>
+                <button type="submit" th:onclick="${currentWeather.changeToCelsius()}">°C</button>
             </div>
             <div class="degrees">
-                <button type="button" >°F</button>
+                <input type="submit" th:onclick="${currentWeather.changeToFahrenheit()}" value="°F"/>
+                <p th:text="">
+
+                </p>
             </div>
         </div>
     </div>

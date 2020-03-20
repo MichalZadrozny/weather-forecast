@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.*;
+import org.springframework.stereotype.Component;
 
+@Component
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -57,15 +59,11 @@ public class CurrentWeather {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    private int currentTemperature;
-    private int minTemperature;
-    private int maxTemperature;
-    private boolean isSetAsCelsius;
+    private String currentTemperature;
+    private String minTemperature;
+    private String maxTemperature;
 
     public CurrentWeather() {
-//        this.isSetAsCelsius = true;
-//        System.out.println("Inside the constructor");
-//        setTemperatures();
     }
 
     public CurrentWeather(Coord coord, List<Weather> weather, String base, Main main, Integer visibility, Wind wind, Rain rain, Clouds clouds, Integer dt, Sys sys, Integer timezone, Integer id, String name, Integer cod, Map<String, Object> additionalProperties) {
@@ -84,8 +82,6 @@ public class CurrentWeather {
         this.name = name;
         this.cod = cod;
         this.additionalProperties = additionalProperties;
-
-//        this.isSetAsCelsius = true;
     }
 
     @JsonProperty("coord")
@@ -238,57 +234,51 @@ public class CurrentWeather {
         this.additionalProperties.put(name, value);
     }
 
-    public int getCurrentTemperature() {
+    public String getCurrentTemperature() {
         return currentTemperature;
     }
 
-    public void setCurrentTemperature(int currentTemperature) {
+    public void setCurrentTemperature(String currentTemperature) {
         this.currentTemperature = currentTemperature;
     }
 
-    public int getMinTemperature() {
+    public String getMinTemperature() {
         return minTemperature;
     }
 
-    public void setMinTemperature(int minTemperature) {
+    public void setMinTemperature(String minTemperature) {
         this.minTemperature = minTemperature;
     }
 
-    public int getMaxTemperature() {
+    public String getMaxTemperature() {
         return maxTemperature;
     }
 
-    public void setMaxTemperature(int maxTemperature) {
+    public void setMaxTemperature(String maxTemperature) {
         this.maxTemperature = maxTemperature;
     }
 
-    public boolean isSetAsCelsius() {
-        return isSetAsCelsius;
+    @Override
+    public String toString() {
+        return "CurrentWeather{" +
+                "coord=" + coord +
+                ", weather=" + weather +
+                ", base='" + base + '\'' +
+                ", main=" + main +
+                ", visibility=" + visibility +
+                ", wind=" + wind +
+                ", rain=" + rain +
+                ", clouds=" + clouds +
+                ", dt=" + dt +
+                ", sys=" + sys +
+                ", timezone=" + timezone +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", cod=" + cod +
+                ", additionalProperties=" + additionalProperties +
+                ", currentTemperature='" + currentTemperature + '\'' +
+                ", minTemperature='" + minTemperature + '\'' +
+                ", maxTemperature='" + maxTemperature +
+                '}';
     }
-
-    public void setSetAsCelsius(boolean setAsCelsius) {
-        isSetAsCelsius = setAsCelsius;
-    }
-
-    public void setTemperatures(){
-        if(isSetAsCelsius){
-            System.out.println("TEST!!");
-            System.out.println(getMain().toString());
-            System.out.println("TEST2!!");
-
-            this.currentTemperature = main.kelvinToCelsius(main.getTemp());
-            this.minTemperature = main.kelvinToCelsius(main.getTempMin());
-            this.maxTemperature = main.kelvinToCelsius(main.getTempMax());
-            System.out.println("Celsius: "+currentTemperature);
-        }else{
-            this.currentTemperature = main.kelvinToFahrenheit(main.getTemp());
-            this.minTemperature = main.kelvinToFahrenheit(main.getTempMin());
-            this.maxTemperature = main.kelvinToFahrenheit(main.getTempMax());
-            System.out.println("Fahrenheit: "+currentTemperature);
-
-        }
-    }
-
-
-
 }

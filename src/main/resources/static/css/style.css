@@ -30,6 +30,11 @@
     background-color: darkseagreen;
 }
 
+.placeLabel{
+    font-size: 25px;
+    font-weight: bold;
+}
+
 body{
     background-color: darkgrey;
 }
