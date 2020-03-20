@@ -1,9 +1,16 @@
-package pl.michalzadrozny.weatherforecast.model;
+package pl.michalzadrozny.weatherforecast.config;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pl.michalzadrozny.weatherforecast.model.CurrentWeather;
 
 @Component
+@Setter
+@Getter
+@ToString
 public class WeatherDisplay{
 
     CurrentWeather currentWeather;
@@ -29,14 +36,6 @@ public class WeatherDisplay{
         }
     }
 
-    public CurrentWeather getCurrentWeather() {
-        return currentWeather;
-    }
-
-    public void setCurrentWeather(CurrentWeather currentWeather) {
-        this.currentWeather = currentWeather;
-    }
-
     public boolean changeToCelsius(){
         setTemperatures(true);
         return true;
@@ -48,10 +47,4 @@ public class WeatherDisplay{
         return false;
     }
 
-    @Override
-    public String toString() {
-        return "WeatherDisplay{" +
-                "currentWeather=" + currentWeather +
-                '}';
-    }
 }

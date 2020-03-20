@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 import pl.michalzadrozny.weatherforecast.config.OpenWeatherMapConfig;
-import pl.michalzadrozny.weatherforecast.model.WeatherDisplay;
+import pl.michalzadrozny.weatherforecast.config.WeatherDisplay;
 import pl.michalzadrozny.weatherforecast.model.CurrentWeather;
 
 @Controller
