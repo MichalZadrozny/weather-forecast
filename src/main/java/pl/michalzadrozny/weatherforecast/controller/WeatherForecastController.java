@@ -39,6 +39,13 @@ public class WeatherForecastController {
 
     @PostMapping("/")
     public String sendCityName(String city, Model model){
+        model.addAttribute("weatherDisplay",weatherDisplay);
+        this.city = city;
+        return "redirect:/weather";
+    }
+
+    @PostMapping("/weather")
+    public String resendCityName(String city, Model model){
         this.city = city;
         return "redirect:/weather";
     }
@@ -53,6 +60,7 @@ public class WeatherForecastController {
         weatherDisplay.setTemperatures(isSetAsCelsius);
 
         model.addAttribute("currentWeather",currentWeather);
+        model.addAttribute("weatherDisplay",weatherDisplay);
 
         return "weather";
     }

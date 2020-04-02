@@ -1,16 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script src="https://kit.fontawesome.com/970b52408b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!--<div th:replace="fragments/page-fragments :: topbar"></div>-->
+<div th:replace="fragments/page-fragments :: top-bar"></div>
 
-<input type="text">
-<button type="button">Search</button>
+<form method="post">
+    <input type="text" name="city">
+    <input type="submit" value="Search"/>
+</form>
+
 <div class="weather-box">
 
 
@@ -21,18 +28,19 @@
     <div>
         <!--        Picture-->
         <div>
+            <img th:src="@{img/weather/${weatherDisplay.getWeatherImage()}.png}" height="60" width="60"/>
+<!--            <img th:src="@{img/weather/cloudy.png}" height="60" width="60"/>-->
 
         </div>
         <!--        Degrees-->
         <div>
-            <!--/*@thymesVar id="currentWeather" type="pl"*/-->
             <h3 th:text="${currentWeather.getCurrentTemperature()}"/>
         </div>
     </div>
 
     <!--    Right details-->
     <div>
-
+        <labal th:text="${currentWeather.getWeather().get(0).getDescription()}"/>
     </div>
 
     <!--    Bottom Hourly Forecast-->
@@ -48,5 +56,9 @@
 </div>
 
 <footer th:replace="fragments/page-fragments :: footer"></footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,46 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Weather Forecast</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <script src="https://kit.fontawesome.com/970b52408b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div th:fragment="topbar">
-        <div class="topbar">
-            Logo
-        </div>
+    <div th:fragment="top-bar" class="top-bar bg-dark">
+        <section>
+            <div class="p-3 ml-4">
+                <a th:href="@{/}" class="index-link">
+                    <div>
+                        <h3>
+                            <span style="color: #ffffff"><i class="fas fa-feather-alt"></i></span> F<span style="color: #ffffff">eather</span> W<span style="color: #ffffff">eather</span> </h3>
+                    </div>
+                </a>
 
-        <div class="topbar">
-            <img src="img/banner.jpg" height="100" width="80%"/>
-        </div>
-
-        <div class="topbar">
-            <div class="degrees">
-                <button type="submit" th:onclick="${currentWeather.changeToCelsius()}">°C</button>
+                <!--            <div class="top-bar">-->
+                <!--                <div class="degrees">-->
+                <!--                    <button type="button" onclick="${weatherDisplay.changeToCelsius()}">°C</button>-->
+                <!--                </div>-->
+                <!--                <div class="degrees">-->
+                <!--                    <input type="button" onclick="${weatherDisplay.changeToFahrenheit()}" value="°F"/>-->
+                <!--                </div>-->
+                <!--            </div>-->
             </div>
-            <div class="degrees">
-                <input type="submit" th:onclick="${currentWeather.changeToFahrenheit()}" value="°F"/>
-                <p th:text="">
+        </section>
 
-                </p>
-            </div>
-        </div>
     </div>
 
-    <footer th:fragment="footer" id="footer" align="bottom">
-        <div class="footer-element">
-            Open Weather API
-        </div>
-        <div class="footer-element">
-            Copyright Weather Forecast Michał Zadrożny
-        </div>
-        <div class="footer-element">
-            <a href="https://github.com/MichalZadrozny">
-                <img src="img/git.png" height="60" width="60"/>
-            </a>
-        </div>
+    <footer th:fragment="footer" class="bg-dark">
+        <section>
+            <div class="container">
+                <div class="row py-3">
+
+                    <div class="col col-4">
+                        <a href="https://openweathermap.org/" class="text-decoration-none text-light">
+                            <p>Open Weather API</p>
+                        </a>
+                    </div>
+
+                    <div class="col col-4 text-light">
+                        <p>2020 &copy; Copyright - Michał Zadrożny</p>
+                    </div>
+
+                    <div class="git col col-4">
+                        <a href="https://github.com/MichalZadrozny" class="text-decoration-none text-light">
+                            <p><i class="fab fa-github"></i></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

@@ -1,11 +1,12 @@
 package pl.michalzadrozny.weatherforecast.model;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.annotation.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Getter
 @Setter
@@ -30,4 +31,7 @@ public class Weather {
     @JsonIgnore
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    public void setDescription(String description) {
+        this.description = description.substring(0,1).toUpperCase() + description.substring(1);
+    }
 }

@@ -1,41 +1,115 @@
-.footer-element{
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-    background-color: cadetblue;
-    border: 3px black;
+/*--------------------------------------GENERAL--------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.topbar{
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
+html {
+    font-size: 62.5%;
 }
 
-.degrees{
+body {
+}
+
+/*--------------------------------------TOP BAR--------------------------------------*/
+.top-bar h3 {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.top-bar a {
+    text-decoration: none;
+}
+
+.top-bar a:hover {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.index-link {
+    color: lightblue;
+}
+
+
+/*---------------------------------------INDEX--------------------------------------*/
+
+/*-----HEADER-----*/
+.hero-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .72);
+    z-index: -1;
+}
+
+header {
+    background-image: url('../img/banner.jpg');
+    position: relative;
+    height: 30rem;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.header-name{
+    /*Zmienić czcionkę*/
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-text{
+    font-size: 1.7rem;
+}
+
+/*--------------------------------------WEATHER--------------------------------------*/
+
+.search-box {}
+
+
+.degrees {
     float: left;
 }
 
-
-#footer{
-    text-align: center;
-    background-color: dimgrey;
-    display: table;
+.weather-box {
     width: 100%;
+    /*background-color: darkseagreen;*/
 }
 
-.weather-box{
-    width: 100%;
-    background-color: darkseagreen;
-}
-
-.placeLabel{
+.placeLabel {
     font-size: 25px;
     font-weight: bold;
 }
 
-body{
-    background-color: darkgrey;
+
+/*--------------------------------------FOOTER--------------------------------------*/
+
+footer {
+    font-weight: bold;
 }
 
+footer .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .row div,
+footer .row a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.git i {
+    font-size: 4rem;
+}

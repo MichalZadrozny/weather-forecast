@@ -1,12 +1,12 @@
 package pl.michalzadrozny.weatherforecast.model;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.fasterxml.jackson.annotation.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Setter
 @Getter
@@ -40,6 +40,8 @@ public class Main {
 
 
     public int kelvinToCelsius(Double kelvin){
+        System.out.println("Kelvin: "+kelvin);
+
         double celsius = kelvin - 273.15;
         int result = (int) Math.round(celsius);
 
@@ -47,7 +49,9 @@ public class Main {
     }
 
     public int kelvinToFahrenheit(Double kelvin){
-        double fahrenheit = (9/5) * (kelvin - 273.15) + 32;
+        System.out.println("Kelvin: "+kelvin);
+        double fahrenheit = 1.8 * (kelvin - 273.15) + 32;
+
         int result = (int) fahrenheit;
 
         return result;
