@@ -33,6 +33,46 @@ body {
     color: lightblue;
 }
 
+/*--------------------------------------SEARCH BOX--------------------------------------*/
+
+.search-box form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search-input {
+    padding: 0.5rem 1.7rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.55);
+    box-shadow: 5px 5px 10px -5px rgba(0, 0 ,0,.4);
+    margin: 2rem;
+    border-radius:50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.search-input i{
+    font-size: 1.4rem;
+}
+
+.search-input input {
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    width: 30rem;
+    text-align: center;
+}
+
+.search-box .btn {
+    width: 10rem;
+    padding: 0.2rem 0.6rem;
+    font-size: 1.5rem;
+    margin: auto;
+    border-radius: 20px;
+
+}
+
 
 /*---------------------------------------INDEX--------------------------------------*/
 
@@ -55,21 +95,22 @@ header {
     z-index: 0;
 }
 
-.header-name{
+.header-name {
     /*Zmienić czcionkę*/
     font-size: 4rem;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.header-text{
+.header-text {
     font-size: 1.7rem;
 }
 
+.content-box{
+height: 50rem;
+}
+
 /*--------------------------------------WEATHER--------------------------------------*/
-
-.search-box {}
-
 
 .degrees {
     float: left;
@@ -83,6 +124,7 @@ header {
 .placeLabel {
     font-size: 25px;
     font-weight: bold;
+    text-align: center;
 }
 
 

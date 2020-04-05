@@ -35,6 +35,16 @@
 
     </div>
 
+    <div th:fragment="search-box" class="search-box p-5">
+        <form method="post">
+            <div class="search-input">
+                <input type="text" autocomplete="off" name="city"><i class="fas fa-search"></i>
+            </div>
+
+            <button class="btn btn-secondary">Search</button>
+        </form>
+    </div>
+
     <footer th:fragment="footer" class="bg-dark">
         <section>
             <div class="container">
