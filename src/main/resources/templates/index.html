@@ -6,50 +6,51 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <script src="https://kit.fontawesome.com/970b52408b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <div th:replace="fragments/page-fragments :: top-bar"></div>
+<div th:replace="fragments/page-fragments :: top-bar"></div>
 
-    <header>
-        <div class="hero-shadow"></div>
-        <div class="d-flex h-100 flex-column justify-content-center align-items-center text-light text-center">
-            <p class="header-name">Feather Weather</p>
-            <p class="header-text">The most accurate weather forecast</p>
-        </div>
-    </header>
+<header>
+    <div class="hero-shadow"></div>
+    <div class="d-flex h-100 flex-column justify-content-center align-items-center text-light text-center">
+        <p class="header-name">Feather Weather</p>
+        <p class="header-text">The most accurate weather forecast</p>
+    </div>
+</header>
 
-    <main>
+<main>
 
 
-        <div class="container d-flex flex-column justify-content-center align-items-center p-5">
+    <div class="container d-flex flex-column justify-content-center align-items-center p-5">
 
-            <div th:replace="fragments/page-fragments :: search-box"></div>
+        <div th:replace="fragments/page-fragments :: search-box"></div>
 
-            <div class="content-box p-5">
-                Welcome to my site!!!
-            </div>
-
+        <div class="content-box p-5">
+            Welcome to my site!!!
         </div>
 
-    </main>
+    </div>
+
+</main>
 
 
-    <footer th:replace="fragments/page-fragments :: footer"></footer>
+<footer th:replace="fragments/page-fragments :: footer"></footer>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+</script>
+<script src="js/searchValidator.js"></script>
 </body>
 
 </html>

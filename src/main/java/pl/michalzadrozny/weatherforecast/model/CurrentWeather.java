@@ -68,6 +68,7 @@ public class CurrentWeather {
     private String currentTemperature;
     private String minTemperature;
     private String maxTemperature;
+    private String perceptibleTemperature;
 
     public CurrentWeather() {
     }
