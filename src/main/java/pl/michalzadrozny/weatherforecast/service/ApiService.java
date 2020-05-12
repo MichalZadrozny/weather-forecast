@@ -9,7 +9,7 @@ import pl.michalzadrozny.weatherforecast.config.OpenWeatherMapConfig;
 @Service
 public class ApiService {
 
-    private OpenWeatherMapConfig openWeatherMapConfig;
+    private final OpenWeatherMapConfig openWeatherMapConfig;
 
     @Autowired
     public ApiService(OpenWeatherMapConfig openWeatherMapConfig) {
@@ -17,9 +17,9 @@ public class ApiService {
     }
 
     public String createUri(String city, String units){
-        UriComponents builder = UriComponentsBuilder.fromHttpUrl(openWeatherMapConfig.getApiUrl())
+        UriComponents builder = UriComponentsBuilder.fromHttpUrl(openWeatherMapConfig.getUrl())
                 .queryParam("q", city)
-                .queryParam("appid", openWeatherMapConfig.getApiKey())
+                .queryParam("appid", openWeatherMapConfig.getKey())
                 .queryParam("units", units)
                 .buildAndExpand();
 
