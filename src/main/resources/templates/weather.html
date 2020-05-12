@@ -23,25 +23,21 @@
 
         <div class="weather-box d-flex flex-column justify-content-center align-items-center">
 
-            <div class="w-100 d-flex flex-column justify-content-center align-items-center">
-                <div class="col-3"></div>
-                <div class="col-9 placeLabel">
-                    <label th:text="${currentWeather.getName()}"/>, <label
-                        th:text="${currentWeather.getSys().getCountry()}"/>
-                </div>
+            <div class="d-flex p-3 flex-column justify-content-center align-items-center place-label">
+                <p><span th:text="${currentWeather.getName()}"></span>, <span
+                        th:text="${currentWeather.getSys().getCountry()}"></span></p>
             </div>
-            <div class="w-100 d-flex justify-content-center align-items-center text-center">
-                <div class="col-1 p-0 d-flex flex-column justify-content-center align-items-center">
-                    <div class="py-3">
-                        <img th:if="${weatherDisplay.getWeatherImage()} != null"
-                             th:src="@{{image}.png(image=${weatherDisplay.getWeatherImage()})}" height="80" width="80"/>
-                    </div>
-                    <div class="temperature">
+
+            <div class="col-12 d-flex justify-content-around align-items-center text-center">
+                <div class="col-5 px-1 d-flex flex-column justify-content-center align-items-end">
+                    <img th:if="${weatherDisplay.getWeatherImage()} != null"
+                         th:src="@{{image}.png(image=${weatherDisplay.getWeatherImage()})}" height="100" width="100"/>
+                    <div class="temperature p-2">
                         <h3 th:text="${currentWeather.getCurrentTemperature()}"/>
                     </div>
                 </div>
 
-                <div class="col-3 text-left">
+                <div class="col-6 px-1 text-left">
                     <table class="table table-striped">
                         <tr>
                             <th>Description</th>

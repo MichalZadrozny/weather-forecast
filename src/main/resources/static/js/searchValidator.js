@@ -14,4 +14,11 @@ function isNotEmpty(){
     }
 }
 
+
 $searchButton.addEventListener("click",isNotEmpty);
+$searchBox.addEventListener("keypress",(event) => {
+    if(event.keyCode === 13){
+        event.preventDefault();
+        isNotEmpty();
+    }
+});

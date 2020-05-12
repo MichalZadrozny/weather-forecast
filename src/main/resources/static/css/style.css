@@ -134,14 +134,15 @@ header {
     width: 100%;
 }
 
-.placeLabel {
-    font-size: 25px;
+.place-label {
+    font-size: 3.2rem;
     font-weight: bold;
     text-align: center;
 }
 
 .temperature h3{
-    font-size: 3.5rem;
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 .weather-box table{
