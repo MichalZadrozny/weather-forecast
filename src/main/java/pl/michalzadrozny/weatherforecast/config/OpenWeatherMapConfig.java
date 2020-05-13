@@ -12,9 +12,6 @@ import org.springframework.context.annotation.Configuration;
 @Setter
 public class OpenWeatherMapConfig {
 
-//    @Value("${api.key}")
     private String key;
-
-//    @Value("${api.url}")
     private String url;
 }

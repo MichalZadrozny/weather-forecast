@@ -39,22 +39,22 @@ public class Main {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
 
-    public int kelvinToCelsius(Double kelvin){
-        System.out.println("Kelvin: "+kelvin);
-
-        double celsius = kelvin - 273.15;
-        int result = (int) Math.round(celsius);
-
-        return result;
-    }
-
-    public int kelvinToFahrenheit(Double kelvin){
-        System.out.println("Kelvin: "+kelvin);
-        double fahrenheit = 1.8 * (kelvin - 273.15) + 32;
-
-        int result = (int) fahrenheit;
-
-        return result;
-    }
+//    public int kelvinToCelsius(Double kelvin){
+//        System.out.println("Kelvin: "+kelvin);
+//
+//        double celsius = kelvin - 273.15;
+//        int result = (int) Math.round(celsius);
+//
+//        return result;
+//    }
+//
+//    public int kelvinToFahrenheit(Double kelvin){
+//        System.out.println("Kelvin: "+kelvin);
+//        double fahrenheit = 1.8 * (kelvin - 273.15) + 32;
+//
+//        int result = (int) fahrenheit;
+//
+//        return result;
+//    }
 
 }

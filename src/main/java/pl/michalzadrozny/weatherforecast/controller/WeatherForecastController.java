@@ -58,7 +58,7 @@ public class WeatherForecastController {
             CurrentWeather currentWeather = restTemplate.getForObject(apiService.createUri(city,"metric"),CurrentWeather.class);
 
             weatherDisplay.setCurrentWeather(currentWeather);
-//            weatherDisplay.setTemperatures(isSetAsCelsius);
+            weatherDisplay.setTemperatures(isSetAsCelsius);
 
             model.addAttribute("currentWeather",currentWeather);
             model.addAttribute("weatherDisplay",weatherDisplay);
