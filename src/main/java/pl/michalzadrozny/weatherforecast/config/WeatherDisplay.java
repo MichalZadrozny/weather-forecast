@@ -22,27 +22,9 @@ public class WeatherDisplay {
         this.currentWeather = currentWeather;
     }
 
-    //    public void setTemperatures(boolean isSetAsCelsius) {
-//        if (isSetAsCelsius) {
-//            currentWeather.setCurrentTemperature(currentWeather.getMain().kelvinToCelsius(currentWeather.getMain().getTemp()) + " °C");
-//            currentWeather.setMinTemperature(currentWeather.getMain().kelvinToCelsius(currentWeather.getMain().getTempMin()) + " °C");
-//            currentWeather.setMaxTemperature(currentWeather.getMain().kelvinToCelsius(currentWeather.getMain().getTempMax()) + " °C");
-//            currentWeather.setPerceptibleTemperature(currentWeather.getMain().kelvinToCelsius(currentWeather.getMain().getFeelsLike()) + " °C");
-//
-//
-//            System.out.println("Celsius: " + currentWeather.getCurrentTemperature());
-//        } else {
-//            currentWeather.setCurrentTemperature(currentWeather.getMain().kelvinToFahrenheit(currentWeather.getMain().getTemp()) + " °F");
-//            currentWeather.setMinTemperature(currentWeather.getMain().kelvinToFahrenheit(currentWeather.getMain().getTempMin()) + " °F");
-//            currentWeather.setMaxTemperature(currentWeather.getMain().kelvinToFahrenheit(currentWeather.getMain().getTempMax()) + " °F");
-//            currentWeather.setPerceptibleTemperature(currentWeather.getMain().kelvinToFahrenheit(currentWeather.getMain().getFeelsLike()) + " °F");
-//            System.out.println("Fahrenheit: " + currentWeather.getCurrentTemperature());
-//
-//        }
-//    }
     public void setTemperatures(boolean isSetAsCelsius) {
         if (isSetAsCelsius) {
-            currentWeather.setCurrentTemperature( round(currentWeather.getMain().getTemp()) + " °C");
+            currentWeather.setCurrentTemperature(round(currentWeather.getMain().getTemp()) + " °C");
             currentWeather.setMinTemperature(round(currentWeather.getMain().getTempMin()) + " °C");
             currentWeather.setMaxTemperature(round(currentWeather.getMain().getTempMax()) + " °C");
             currentWeather.setPerceptibleTemperature(round(currentWeather.getMain().getFeelsLike()) + " °C");
@@ -57,21 +39,6 @@ public class WeatherDisplay {
             System.out.println("Fahrenheit: " + currentWeather.getCurrentTemperature());
         }
     }
-//
-//    public boolean changeToCelsius() {
-//        System.out.println("Before changing to Celsius");
-//        setTemperatures(true);
-//        System.out.println("Changed to Celsius");
-//        return true;
-//    }
-//
-//    public boolean changeToFahrenheit() {
-//        System.out.println("Before changing to Fahrenheit");
-//
-//        setTemperatures(false);
-//        System.out.println("Changed to Fahrenheit");
-//        return false;
-//    }
 
     public String getWeatherImage() {
 
