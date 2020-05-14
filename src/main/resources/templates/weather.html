@@ -33,7 +33,7 @@
                     <img th:if="${weatherDisplay.getWeatherImage()} != null"
                          th:src="@{{image}.png(image=${weatherDisplay.getWeatherImage()})}" height="100" width="100" alt="weather"/>
                     <div class="temperature p-2">
-                        <h3 th:text="${currentWeather.getCurrentTemperature()}"></h3>
+                        <h3 th:text="${currentWeather.getCurrentTemperature()}"/>
                     </div>
                 </div>
 

@@ -26,18 +26,67 @@
 
 <main>
 
-    <div class="container d-flex flex-column justify-content-center align-items-center p-5">
-
+    <div class="container d-flex flex-column justify-content-center align-items-center p-4">
         <div th:replace="fragments/page-fragments :: search-box"></div>
+    </div>
 
-        <div class="content-box p-5">
-            Welcome to my site!!!
+    <div class="container pb-5">
+        <div class="row justify-content-between">
+            <div class="col col-3">
+                <div class="card m-4">
+                    <div class="city-image" style="background-image: url('./img/cities/warsaw.jpg');">
+                        <div class="city-hero-shadow"></div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Warsaw</h5>
+                        <p class="card-text">11 °C - Overcast clouds</p>
+                        <a href="#" class="btn btn-secondary">More info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-3">
+                <div class="card m-4">
+                    <div class="city-image" style="background-image: url('./img/cities/tokyo.jpg');">
+                        <div class="city-hero-shadow"></div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tokyo</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-secondary">More info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-3">
+                <div class="card m-4">
+                    <div class="city-image" style="background-image: url('./img/cities/london.jpg');">
+                        <div class="city-hero-shadow"></div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">London</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-secondary">More info</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-3">
+                <div class="card m-4">
+                    <div class="city-image" style="background-image: url('./img/cities/washington.jpg');">
+                        <div class="city-hero-shadow"></div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Washington</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-secondary">More info</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
 
 </main>
-
 
 <footer th:replace="fragments/page-fragments :: footer"></footer>
 
