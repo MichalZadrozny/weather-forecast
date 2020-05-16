@@ -63,7 +63,7 @@ public class CurrentWeather {
     @JsonProperty("cod")
     private Integer cod;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
 
     private String currentTemperature;
     private String minTemperature;
@@ -90,5 +90,4 @@ public class CurrentWeather {
         this.cod = cod;
         this.additionalProperties = additionalProperties;
     }
-
 }

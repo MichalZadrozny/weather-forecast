@@ -34,52 +34,44 @@
         <div class="row justify-content-between">
             <div class="col col-3">
                 <div class="card m-4">
-                    <div class="city-image" style="background-image: url('./img/cities/warsaw.jpg');">
-                        <div class="city-hero-shadow"></div>
-                    </div>
+
                     <div class="card-body">
                         <h5 class="card-title">Warsaw</h5>
                         <p class="card-text">11 °C - Overcast clouds</p>
-                        <a href="#" class="btn btn-secondary">More info</a>
+                        <a th:href="${popularCities.getCities().get(0).getLink()}" class="btn btn-secondary">More info</a>
                     </div>
                 </div>
             </div>
 
             <div class="col col-3">
                 <div class="card m-4">
-                    <div class="city-image" style="background-image: url('./img/cities/tokyo.jpg');">
-                        <div class="city-hero-shadow"></div>
-                    </div>
+
                     <div class="card-body">
                         <h5 class="card-title">Tokyo</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-secondary">More info</a>
+                        <a th:href="${popularCities.getCities().get(1).getLink()}" class="btn btn-secondary">More info</a>
                     </div>
                 </div>
             </div>
 
             <div class="col col-3">
                 <div class="card m-4">
-                    <div class="city-image" style="background-image: url('./img/cities/london.jpg');">
-                        <div class="city-hero-shadow"></div>
-                    </div>
+
                     <div class="card-body">
                         <h5 class="card-title">London</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-secondary">More info</a>
+                        <a th:href="${popularCities.getCities().get(2).getLink()}" class="btn btn-secondary">More info</a>
                     </div>
                 </div>
             </div>
 
             <div class="col col-3">
                 <div class="card m-4">
-                    <div class="city-image" style="background-image: url('./img/cities/washington.jpg');">
-                        <div class="city-hero-shadow"></div>
-                    </div>
+
                     <div class="card-body">
                         <h5 class="card-title">Washington</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-secondary">More info</a>
+                        <a th:href="${popularCities.getCities().get(3).getLink()}" class="btn btn-secondary">More info</a>
                     </div>
                 </div>
             </div>

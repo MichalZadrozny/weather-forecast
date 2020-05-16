@@ -3,6 +3,7 @@ package pl.michalzadrozny.weatherforecast.config;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import pl.michalzadrozny.weatherforecast.model.CurrentWeather;
@@ -10,12 +11,14 @@ import pl.michalzadrozny.weatherforecast.model.CurrentWeather;
 import static java.lang.Math.round;
 
 @Component
-@Setter
 @Getter
 @ToString
+@Slf4j
 public class WeatherDisplay {
 
+    @Setter
     CurrentWeather currentWeather;
+    private String link;
 
     @Autowired
     public WeatherDisplay(CurrentWeather currentWeather) {
@@ -28,15 +31,11 @@ public class WeatherDisplay {
             currentWeather.setMinTemperature(round(currentWeather.getMain().getTempMin()) + " °C");
             currentWeather.setMaxTemperature(round(currentWeather.getMain().getTempMax()) + " °C");
             currentWeather.setPerceptibleTemperature(round(currentWeather.getMain().getFeelsLike()) + " °C");
-
-            System.out.println("Celsius: " + currentWeather.getCurrentTemperature());
         } else {
             currentWeather.setCurrentTemperature(round(currentWeather.getMain().getTemp()) + " °F");
             currentWeather.setMinTemperature(round(currentWeather.getMain().getTempMin()) + " °F");
             currentWeather.setMaxTemperature(round(currentWeather.getMain().getTempMax()) + " °F");
             currentWeather.setPerceptibleTemperature(round(currentWeather.getMain().getFeelsLike()) + " °F");
-
-            System.out.println("Fahrenheit: " + currentWeather.getCurrentTemperature());
         }
     }
 
@@ -64,6 +63,10 @@ public class WeatherDisplay {
         } else {
             return null;
         }
+    }
+
+    public void setLink(String url){
+        this.link = url+"/"+currentWeather.getName();
     }
 
 }
