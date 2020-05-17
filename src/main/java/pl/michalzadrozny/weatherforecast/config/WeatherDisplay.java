@@ -66,7 +66,7 @@ public class WeatherDisplay {
     }
 
     public void setLink(String url){
-        this.link = url+"/"+currentWeather.getName();
+        this.link = url+"/weather/"+currentWeather.getName();
     }
 
 }

@@ -13,7 +13,6 @@ import java.util.Map;
 @Component
 @Getter
 @Setter
-@ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
@@ -89,5 +88,13 @@ public class CurrentWeather {
         this.name = name;
         this.cod = cod;
         this.additionalProperties = additionalProperties;
+    }
+
+    @Override
+    public String toString() {
+        return "CurrentWeather{" +
+                "name='" + name + '\'' +
+                ", perceptibleTemperature='" + perceptibleTemperature + '\'' +
+                '}';
     }
 }

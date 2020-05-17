@@ -31,9 +31,9 @@
             <div class="col-12 d-flex justify-content-around align-items-center text-center">
                 <div class="col-5 px-1 d-flex flex-column justify-content-center align-items-end">
                     <img th:if="${weatherDisplay.getWeatherImage()} != null"
-                         th:src="@{{image}.png(image=${weatherDisplay.getWeatherImage()})}" height="100" width="100" alt="weather"/>
+                         th:src="@{/{image}.png(image=${weatherDisplay.getWeatherImage()})}" height="100" width="100" alt="weather"/>
                     <div class="temperature p-2">
-                        <h3 th:text="${currentWeather.getCurrentTemperature()}"/>
+                        <h3 th:text="${currentWeather.getCurrentTemperature()}"></h3>
                     </div>
                 </div>
 
@@ -68,11 +68,6 @@
                             <td th:text="${currentWeather.getWind().getSpeed()}+' m/h'"></td>
                         </tr>
                     </table>
-                    <!--                    <p th:text="${currentWeather.getWeather().get(0).getDescription()}" />-->
-                    <!--                    <p th:text="${currentWeather.getMain().getTempMin()}" />-->
-                    <!--                    <p th:text="${currentWeather.getMain().getTempMax()}" />-->
-                    <!--                    <p th:text="${currentWeather.getMain().getHumidity()}" />-->
-                    <!--                    <p th:text="${currentWeather.getMain().getPressure()}" />-->
                 </div>
             </div>
 <!--            <div>-->
@@ -104,7 +99,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
-<script src="js/searchValidator.js"></script>
+<script th:src="@{/js/searchValidator.js}"></script>
 </body>
 
 </html>

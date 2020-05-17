@@ -181,6 +181,10 @@ header {
     z-index: 0;
 }
 
+.popular-city-temperature{
+    font-size: 2.5rem;
+}
+
 /*--------------------------------------WEATHER--------------------------------------*/
 
 .degrees {

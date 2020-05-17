@@ -36,8 +36,10 @@ public class WeatherForecastController {
 
     @GetMapping("/")
     public String indexPage(Model model){
-        String baseUrl = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
-        popularCitiesService.setPopularCities(baseUrl);
+        if(popularCitiesService.getCities().isEmpty()){
+            String baseUrl = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
+            popularCitiesService.setPopularCities(baseUrl, isSetAsCelsius);
+        }
         model.addAttribute("popularCities", popularCitiesService);
         return "index";
     }
@@ -45,12 +47,10 @@ public class WeatherForecastController {
     @PostMapping("/")
     public String sendCityName(RedirectAttributes redirectAttributes, String city){
         redirectAttributes.addAttribute("city",city);
-        return "redirect:/{city}";
+        return "redirect:/weather/{city}";
     }
 
-
-
-    @GetMapping("/{city}")
+    @GetMapping("/weather/{city}")
     public String showWeatherPage(@PathVariable String city, Model model) {
         try{
             CurrentWeather currentWeather = apiService.getWeather(city);
@@ -70,10 +70,10 @@ public class WeatherForecastController {
         return "index";
     }
 
-    @PostMapping("/{city}")
+    @PostMapping("/weather/{city}")
     public String resendCityName(RedirectAttributes redirectAttributes, String city){
         redirectAttributes.addAttribute("city",city);
-        return "redirect:/{city}";
+        return "redirect:/weather/{city}";
     }
 
 }

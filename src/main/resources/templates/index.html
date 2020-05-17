@@ -33,45 +33,77 @@
     <div class="container pb-5">
         <div class="row justify-content-between">
             <div class="col col-3">
-                <div class="card m-4">
+                <div class="card m-5">
 
                     <div class="card-body">
-                        <h5 class="card-title">Warsaw</h5>
-                        <p class="card-text">11 °C - Overcast clouds</p>
-                        <a th:href="${popularCities.getCities().get(0).getLink()}" class="btn btn-secondary">More info</a>
+                        <h4 class="card-title"
+                            th:text="${popularCities.getCities().get(0).getCurrentWeather().getName()}"></h4>
+                        <div class="py-3 d-flex justify-content-around align-items-center">
+                            <div th:if="${popularCities.getCities().get(0).getWeatherImage() != null}">
+                                <img th:src="@{{image}.png(image=${popularCities.getCities().get(0).getWeatherImage()})}"
+                                     height="60" width="60" alt="weather"/>
+                            </div>
+                            <span th:text="${popularCities.getCities().get(0).getCurrentWeather().getCurrentTemperature()}" class="popular-city-temperature"></span>
+                        </div>
+                        <a th:href="${popularCities.getCities().get(0).getLink()}" class="btn btn-secondary">More
+                            info</a>
                     </div>
                 </div>
             </div>
 
             <div class="col col-3">
-                <div class="card m-4">
+                <div class="card m-5">
 
                     <div class="card-body">
-                        <h5 class="card-title">Tokyo</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a th:href="${popularCities.getCities().get(1).getLink()}" class="btn btn-secondary">More info</a>
+                        <h4 class="card-title"
+                            th:text="${popularCities.getCities().get(1).getCurrentWeather().getName()}"></h4>
+                        <div class="py-3 d-flex justify-content-around align-items-center">
+                            <div th:if="${popularCities.getCities().get(1).getWeatherImage() != null}">
+                                <img th:src="@{{image}.png(image=${popularCities.getCities().get(1).getWeatherImage()})}"
+                                     height="60" width="60" alt="weather"/>
+                            </div>
+                            <span th:text="${popularCities.getCities().get(1).getCurrentWeather().getCurrentTemperature()}" class="popular-city-temperature"></span>
+                        </div>
+                        <a th:href="${popularCities.getCities().get(1).getLink()}" class="btn btn-secondary">More
+                            info</a>
                     </div>
                 </div>
             </div>
 
             <div class="col col-3">
-                <div class="card m-4">
+                <div class="card m-5">
 
                     <div class="card-body">
-                        <h5 class="card-title">London</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a th:href="${popularCities.getCities().get(2).getLink()}" class="btn btn-secondary">More info</a>
+                        <h4 class="card-title"
+                            th:text="${popularCities.getCities().get(2).getCurrentWeather().getName()}"></h4>
+                        <div class="py-3 d-flex justify-content-around align-items-center">
+                            <div th:if="${popularCities.getCities().get(2).getWeatherImage() != null}">
+                                <img th:src="@{{image}.png(image=${popularCities.getCities().get(2).getWeatherImage()})}"
+                                     height="60" width="60" alt="weather"/>
+                            </div>
+                            <span th:text="${popularCities.getCities().get(2).getCurrentWeather().getCurrentTemperature()}" class="popular-city-temperature"></span>
+                        </div>
+                        <a th:href="${popularCities.getCities().get(2).getLink()}" class="btn btn-secondary">More
+                            info</a>
                     </div>
                 </div>
             </div>
 
             <div class="col col-3">
-                <div class="card m-4">
+                <div class="card m-5">
 
                     <div class="card-body">
-                        <h5 class="card-title">Washington</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a th:href="${popularCities.getCities().get(3).getLink()}" class="btn btn-secondary">More info</a>
+                        <h4 class="card-title"
+                            th:text="${popularCities.getCities().get(3).getCurrentWeather().getName()}"></h4>
+                        <div class="py-3 d-flex justify-content-around align-items-center">
+                            <div th:if="${popularCities.getCities().get(3).getWeatherImage() != null}">
+                                <img th:src="@{{image}.png(image=${popularCities.getCities().get(3).getWeatherImage()})}"
+                                     height="60" width="60" alt="weather"/>
+                            </div>
+                            <span th:text="${popularCities.getCities().get(3).getCurrentWeather().getCurrentTemperature()}" class="popular-city-temperature"></span>
+                        </div>
+                        <a th:href="${popularCities.getCities().get(3).getLink()}" class="btn btn-secondary">More
+                            info</a>
                     </div>
                 </div>
             </div>

@@ -25,7 +25,7 @@ public class PopularCitiesService {
         cities = new ArrayList<>();
     }
 
-    public void setPopularCities(String url){
+    public void setPopularCities(String url, boolean isSetAsCelsius){
         WeatherDisplay city1 = new WeatherDisplay(apiService.getWeather("Warsaw"));
         WeatherDisplay city2 = new WeatherDisplay(apiService.getWeather("Tokyo"));
         WeatherDisplay city3 = new WeatherDisplay(apiService.getWeather("London"));
@@ -35,6 +35,11 @@ public class PopularCitiesService {
         city2.setLink(url);
         city3.setLink(url);
         city4.setLink(url);
+
+        city1.setTemperatures(isSetAsCelsius);
+        city2.setTemperatures(isSetAsCelsius);
+        city3.setTemperatures(isSetAsCelsius);
+        city4.setTemperatures(isSetAsCelsius);
 
         cities.add(city1);
         cities.add(city2);
