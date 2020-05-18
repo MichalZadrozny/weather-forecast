@@ -27,7 +27,12 @@
 <main>
 
     <div class="container d-flex flex-column justify-content-center align-items-center p-4">
-        <div th:replace="fragments/page-fragments :: search-box"></div>
+        <div th:if="${found} == false">
+            <div th:replace="fragments/page-fragments :: search-box(value='City not found')"></div>
+        </div>
+        <div th:if="${found} != false">
+            <div th:replace="fragments/page-fragments :: search-box"></div>
+        </div>
     </div>
 
     <div class="container pb-5">

@@ -33,7 +33,8 @@
         <div class="search-input">
             <input type="text" autocomplete="off" name="city"><i class="fas fa-search"></i>
         </div>
-        <p class="search-info"></p>
+        <!--/*@thymesVar id="value" type="pl"*/-->
+        <p class="search-info" th:text="${value}"></p>
 
         <button type="button" class="btn search-btn btn-secondary">Search</button>
     </form>
